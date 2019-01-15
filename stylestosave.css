@@ -1,4 +1,40 @@
-p {
-    /* "floating element" subtle shadow */
+/* "floating element" subtle shadow */
+
+.floating {
     box-shadow: 0 2px 10px -5px rgba(0,0,0,.8);
+}
+
+/* "Recessed" element box shadow */
+
+.recessed {
+    box-shadow: inset 2px 4px 10px -3px rgba(0,0,0,.8), 
+    inset 0px 0px 10px -3px rgba(0,0,0,.6);   
+}
+
+
+/* Vertical text */
+
+.vert-text {
+    writing-mode: vertical-lr;
+    text-orientation:  upright; 
+}
+
+/* Center vertically and horizontally */
+
+/* Maintains center alignment even when element
+is resized. */ 
+
+.center {
+
+    /*    
+    If block with class="center" is placed inside another 
+    block element, then parent element must have position: relative for
+    below code to work.  Default position: static may work, too, but
+    parent can't have position: absolute.
+    */
+    
+    position: absolute;           
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);    
 }
