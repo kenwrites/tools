@@ -28,6 +28,15 @@ Copyright (c) 2012, Mark Pilgrim, Jonathan Neal, All rights reserved. */
     font-family: "Essays 1743", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
 }
 
+/* Clearfix:  prevents parent elements from collapsing when
+children are floated.  Apply this to the parent element.  */
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /* "floating element" subtle shadow */
 
 .floating {
