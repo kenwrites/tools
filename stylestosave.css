@@ -69,9 +69,16 @@ is resized. */
     transform:  translate(-50%, -50%);    
 }
 
+/* Sticky footer 
+
+Use below css on a wrapper div that encapsulates content area
+in order to stick the footer to the bottom of the page. 
+
+Replace '89px' with actual footer height.  
+
+*/
 
 
-
-/* Copyrights */
-
-
+.wrap {
+	min-height: calc(100vh - 89px);
+}
