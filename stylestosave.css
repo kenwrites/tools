@@ -1,3 +1,33 @@
+/* Cool fonts */
+
+/* "Dive Into HTML 5" stylesheet
+Copyright (c) 2012, Mark Pilgrim, Jonathan Neal, All rights reserved. */
+/* "Essays 1743" ............................................ http://www.thibault.org/fonts/essays/ */
+@font-face {
+    font-family: "Essays 1743";
+    src: url("f/Essays1743.eot?") format("eot"), url("f/Essays1743.woff") format("woff"), url("f/Essays1743.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Essays 1743";
+    font-weight: bold;
+    src: url("f/Essays1743-bold.eot?") format("eot"), url("f/Essays1743-bold.woff") format("woff"), url("f/Essays1743-bold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Essays 1743";
+    font-style: italic;
+    src: url("f/Essays1743-italic.eot?") format("eot"), url("f/Essays1743-italic.woff") format("woff"), url("f/Essays1743-italic.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Essays 1743";
+    font-style: italic;
+    font-weight: bold;
+    src: url("f/Essays1743-bold-italic.eot?") format("eot"), url("f/Essays1743-bold-italic.woff") format("woff"), url("f/Essays1743-bold-italic.ttf") format("truetype");
+  }
+
+.essays-font {
+    font-family: "Essays 1743", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+}
+
 /* "floating element" subtle shadow */
 
 .floating {
@@ -38,3 +68,10 @@ is resized. */
     left: 50%;
     transform:  translate(-50%, -50%);    
 }
+
+
+
+
+/* Copyrights */
+
+
