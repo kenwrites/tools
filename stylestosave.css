@@ -68,8 +68,7 @@ is resized. */
     /*    
     If block with class="center" is placed inside another 
     block element, then parent element must have position: relative for
-    below code to work.  Default position: static may work, too, but
-    parent can't have position: absolute.
+    below code to work.  Parent can't have position: absolute.
     */
     
     position: absolute;           
