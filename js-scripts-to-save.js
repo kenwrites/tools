@@ -10,9 +10,16 @@ function get_random_number(upper) {
     return random_number;
 }
 
-
 // Create variables with `eval'.  Could be combined with loop to create 
 // variables iteratively.  
 
 var str = "var variable1;"
 eval(str);
+
+// Print to element by ID.  Replace "poem" with ID of target element
+// Input must be formatted as HTML
+
+function print(message) {
+    var print_to = document.getElementById("poem");
+    print_to.innerHTML = message;
+}
