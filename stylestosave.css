@@ -50,6 +50,18 @@ children are floated.  Apply this to the parent element.  */
     inset 0px 0px 10px -3px rgba(0,0,0,.6);   
 }
 
+/* Drop-cap first letter of paragraph */
+
+.intro:first-letter {
+    float: left;
+    font-size: 80px;
+    color: white;
+    padding: 10px 10px;
+    background-color: #384047;
+    margin: 10px 10px 0 0;
+    border-radius: 5px;
+    line-height: 1;  /* not sure what this does.  Doesn't appear to be an issue in Firefox to delete this line */
+}
 
 /* Vertical text */
 
