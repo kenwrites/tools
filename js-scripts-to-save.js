@@ -23,3 +23,11 @@ function print(message) {
     var print_to = document.getElementById("poem");
     print_to.innerHTML = message;
 }
+
+// Create event listener that responds to button click
+
+const btn = document.getElementById("btn");
+
+btn.addEventListener('click', function(event) {
+    [code];
+});
