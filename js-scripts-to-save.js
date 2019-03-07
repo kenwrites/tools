@@ -31,3 +31,35 @@ const btn = document.getElementById("btn");
 btn.addEventListener('click', function(event) {
     [code];
 });
+
+// AJAX Listener Skeleton
+
+var url
+var request
+
+request = new XMLHttpRequest()
+
+request.onreadystatechange = () => {
+    if (request.readyState < 4) {
+
+        console.log("request readyState: " + request.readyState)
+
+    } else if (request.readyState === 4) {
+
+        console.log("request readyState: " + request.readyState)
+
+        if (request.status == 200) {
+
+            console.log("request status: " + request.status)
+
+        } else {
+
+            console.log("request status: " + request.status)
+
+        }
+
+    }
+}
+
+request.open('GET', url)
+request.send()
