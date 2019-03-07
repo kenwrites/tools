@@ -72,6 +72,6 @@ var base_url
 
 function make_api_url(key, value, base_url) {
     let uri = encodeURI(value)
-    let url = base_url + '?' + key + "=" + uri
+    let url = base_url + '&' + key + "=" + uri
     return url
 }
