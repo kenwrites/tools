@@ -63,3 +63,15 @@ request.onreadystatechange = () => {
 
 request.open('GET', url)
 request.send()
+
+// Make URL for GET request to an API
+
+var key
+var value
+var base_url
+
+function make_api_url(key, value, base_url) {
+    let uri = encodeURI(value)
+    let url = base_url + '?' + key + "=" + uri
+    return url
+}
