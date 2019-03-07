@@ -32,6 +32,10 @@ btn.addEventListener('click', function(event) {
     [code];
 });
 
+/*********************************************************************
+AJAX Stuff
+************************************************************************/
+
 // AJAX Listener Skeleton
 
 var url
@@ -74,4 +78,38 @@ function make_api_url(key, value, base_url) {
     let uri = encodeURI(value)
     let url = base_url + '&' + key + "=" + uri
     return url
+}
+
+// Select item from within a returned JSON file
+
+function select_item(object, key_array) {
+
+    if (key_array.length === 0) {
+
+        return object
+
+    } else {
+
+        let selector = key_array.shift()
+        let selection = object[selector]
+        return select_item(selection, key_array)
+
+    }
+}
+
+function get_item_from_json_request(request, item_location) {
+
+    // item_location should be a dot-notation string specifying
+    // the location of the item.  i.e 'search.0.pageid'
+
+    let json
+    let item
+
+    json = JSON.parse(request.response)
+    keys = item_location.split('.')
+
+    item = select_item(json, keys)
+
+    return item
+
 }
