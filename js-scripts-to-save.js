@@ -73,14 +73,21 @@ request.send()
 var key
 var value
 var base_url
+var ampersand = true
 
-function make_api_url(key, value, base_url) {
+function make_api_url(key, value, base_url, ampersand) {
     let uri = encodeURI(value)
-    let url = base_url + '&' + key + "=" + uri
+    let url
+    if (ampersand) {
+        url = base_url + '&' + key + "=" + uri
+    } else {
+        url = base_url + key + "=" + uri
+    }
     return url
 }
 
-// Select item from within a returned JSON file
+// Select item from within a returned JSON file 
+// Must use both functions below in tandem
 
 function select_item(object, key_array) {
 
