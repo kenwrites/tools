@@ -3,7 +3,7 @@
 /* "Dive Into HTML 5" stylesheet
 Copyright (c) 2012, Mark Pilgrim, Jonathan Neal, All rights reserved. */
 /* "Essays 1743" ............................................ http://www.thibault.org/fonts/essays/ */
-@font-face {
+  @font-face {
     font-family: "Essays 1743";
     src: url("f/Essays1743.eot?") format("eot"), url("f/Essays1743.woff") format("woff"), url("f/Essays1743.ttf") format("truetype");
   }
@@ -102,3 +102,21 @@ Replace '89px' with actual footer height.
 .wrap {
 	min-height: calc(100vh - 89px);
 }
+
+/* Skewed Effect 
+
+Can be used with ::after as well.  
+
+*/
+
+
+section::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 50px; 
+  position: absolute;
+  transform: skewY(-2deg);
+  background-color: $color-shade;
+  top: -25px;
+} 
