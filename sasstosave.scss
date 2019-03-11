@@ -1,11 +1,24 @@
 // Unit converters
 
-    @function px-to-percent($target, $context: $max-width) {
-        $percent: ($target / $context) * 100%;
-        @return $percent;
-    }
+$max-width: 1000px; 
 
-    @function px-to-rem($target, $context: $max-width) {
-        $percent: ($target / $context) * 1rem;
-        @return $percent;
-    }
+@function px-to-percent($target, $context: $max-width) {
+    $percent: ($target / $context) * 100%;
+    @return $percent;
+}
+
+@function px-to-rem($target, $context: $max-width) {
+    $percent: ($target / $context) * 1rem;
+    @return $percent;
+}
+
+// Layout tools
+
+$gutter: 10px;
+
+@function flex-item-basis($items-per-line, $gtr: $gutter) {
+    $gtr-percent: px-to-percent($gtr) * 2;
+    $gtr-total: $gtr-percent * $items-per-line;
+    $flex-basis: (100% / $items-per-line) - $gtr-total;
+    @return $flex-basis;
+}
