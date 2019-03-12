@@ -22,3 +22,27 @@ $gutter: 10px;
     $flex-basis: (100% / $items-per-line) - $gtr-total;
     @return $flex-basis;
 }
+
+// Define breakpoints with a map and a mixin
+
+$breakpoints: (
+     'xs': 575px,
+     'sm': 576px,
+    'med': 768px,
+     'lg': 992px
+);
+
+@mixin media_query($break) {
+  $value: map-get($map: $breakpoints, $key: $break);
+  $sm: map-get($map: $breakpoints, $key: 'sm');
+
+  @if ($value < $sm) {
+    @media (max-width: $value) {
+      @content;
+    }
+  } @else if ($value >= $sm) {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
