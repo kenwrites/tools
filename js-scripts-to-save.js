@@ -1,3 +1,8 @@
+/*********************************************************************
+Numbers
+************************************************************************/
+
+
 // Random number generator - example generates number from 1 to 6
 
 var randomNumber = Math.floor(Math.random() * 6) + 1;
@@ -10,27 +15,20 @@ function get_random_number(upper) {
     return random_number;
 }
 
-// Create variables with `eval'.  Could be combined with loop to create 
-// variables iteratively.  
+// Generate a hash from a string
+// From https://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript/7616484#7616484
 
-var str = "var variable1;"
-eval(str);
 
-// Print to element by ID.  Replace "poem" with ID of target element
-// Input must be formatted as HTML
-
-function print(message) {
-    var print_to = document.getElementById("poem");
-    print_to.innerHTML = message;
-}
-
-// Create event listener that responds to button click
-
-const btn = document.getElementById("btn");
-
-btn.addEventListener('click', function(event) {
-    [code];
-});
+String.prototype.hashCode = function () {
+    var hash = 0, i, chr;
+    if (this.length === 0) return hash;
+    for (i = 0; i < this.length; i++) {
+        chr = this.charCodeAt(i);
+        hash = ((hash << 5) - hash) + chr;
+        hash |= 0; // Convert to 32bit integer
+    }
+    return hash;
+};
 
 /*********************************************************************
 AJAX Stuff
@@ -120,3 +118,4 @@ function get_item_from_json_request(request, item_location) {
     return item
 
 }
+
