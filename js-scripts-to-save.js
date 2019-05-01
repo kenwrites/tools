@@ -30,6 +30,22 @@ String.prototype.hashCode = function () {
     return hash;
 };
 
+
+/*********************************************************************
+Working with Dates
+************************************************************************/
+
+// assume 'day' is a string in the format YYYY-MM-DD
+
+let day;
+date_split = day.date.split('-');
+year = parseInt(date_split[0]);
+month_numeral = parseInt(date_split[1]);
+day_of_month = parseInt(date_split[2]);
+date = new Date(year, month_numeral-1, day_of_month);
+month = date.toDateString().split(' ')[1];
+
+
 /*********************************************************************
 AJAX Stuff
 ************************************************************************/
